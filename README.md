@@ -1,105 +1,134 @@
-# The Daily Reset — 30-Day Exercise & Diet Journey
+# Eye Reset --- 21-Day Eye-Care Guide
 
-A lightweight, responsive habit tracker for building consistent exercise and nutrition routines over 30 days. It runs as a standalone HTML page, with no build step, framework, database, or account required.
+A lightweight, single-file HTML app for following a gentle eye-comfort
+routine and tracking habits over 21 days. It includes an embedded
+YouTube follow-along video, a daily checklist, a progress calendar,
+notes, and JSON backup/restore.
+
+> **Important:** This is a wellness and eye-comfort tracker, not medical
+> treatment. Eye exercises are not proven to reverse refractive errors
+> or remove the need for prescribed glasses.
 
 ## Features
 
-- **30-day progressive journey** with four phases: Foundation, Build the Rhythm, Get Stronger, and Own Your Routine.
-- **Daily exercise checklist** with movement, strength, mobility, and recovery guidance.
-- **Daily diet checklist** focused on balanced meals, protein sources, fruit and vegetables, whole grains, hydration, and mindful choices.
-- **Progress dashboard** with journey progress, habit completion, completed days, streak, and recent average.
-- **Interactive 30-day map** for opening previous dates and reviewing or correcting saved check-ins.
-- **Short daily reflection** to record energy and a meaningful observation.
-- **Weekly reviews** to reflect on what worked and what to improve.
-- **Automatic local saving** in the browser using `localStorage`.
-- **JSON backup export/import** for backing up or restoring tracker data.
-- **Dark and light themes**.
-- **Responsive layout** for desktop and mobile.
-- **Research links** included in the page.
+-   **YouTube follow-along video** --- embeds
+    [2VmjCxXBW-c](https://youtu.be/2VmjCxXBW-c), starting at
+    approximately **0:37**.
+-   **21-day tracker** --- select a day and check off five habits.
+-   **Progress calendar** --- see daily completion and overall progress.
+-   **Daily notes** --- record outdoor time, comfort, symptoms, and
+    observations.
+-   **Automatic saving** --- stores progress in the current browser
+    using `localStorage`.
+-   **Backup and restore** --- export progress as a JSON file and import
+    it later.
+-   **Responsive layout** --- suitable for desktop and mobile browsers.
+-   **Safety guidance** --- reminders about avoiding direct sun-gazing
+    and pressure on the eyes.
 
 ## Getting started
 
 ### Option 1: Open the HTML file
 
-1. Download or clone the project files.
-2. Open `30-day-exercise-diet-journey.html` in a modern browser.
-3. Set or confirm the journey start date if prompted.
-4. Complete the daily exercise and diet tasks.
-5. Your progress saves automatically in that browser.
+1.  Save `eye-reset-detailed-21-day-guide.html` to your computer.
+2.  Open it in a modern browser such as Chrome, Firefox, Edge, or
+    Safari.
+3.  Use the video at the top, then select a day and complete the
+    checklist.
 
-There is no dependency installation or build command.
+Some browsers or YouTube settings may prevent video playback when the
+page is opened directly as a local file. If that happens, try Option 2.
 
-### Option 2: Serve it locally
+### Option 2: Run a local web server
 
-You can use any static file server. For example, with Python installed:
+You need Python 3 installed.
 
-```bash
-python -m http.server 8000
-```
+1.  Open a terminal in the folder containing the HTML file.
 
-Run that command from the directory containing the HTML file, then open:
+2.  Run:
 
-```text
-http://localhost:8000/30-day-exercise-diet-journey.html
-```
+    ``` bash
+    python3 -m http.server 8000
+    ```
 
-## How to use the tracker
+3.  Open `http://localhost:8000/eye-reset-detailed-21-day-guide.html` in
+    your browser.
 
-1. **Start your journey.** Choose the date from which your 30-day plan should run.
-2. **Check off daily habits.** Use the exercise and diet lists to track the actions you complete.
-3. **Review progress.** Journey progress measures the timeline; habit completion measures the tasks completed.
-4. **Review earlier days.** Select a date in the 30-day map to view or correct its saved checklist and reflection. Use the return-to-today control to go back to the current date.
-5. **Reflect briefly.** Record your energy and a short note about the day.
-6. **Review weekly.** Capture what worked and what you want to improve.
-7. **Back up your data.** Export a JSON backup periodically. Import a backup to restore the data in a compatible copy of the tracker.
+4.  Stop the server with `Ctrl+C` when finished.
 
-## Data and privacy
+No npm install, build step, database, or backend server is required.
 
-- The tracker stores progress in the browser's `localStorage` on the device and browser where you use it.
-- The standalone page does not require an account or application server.
-- Browser data may be lost if site data is cleared, the browser profile is removed, or you switch browsers/devices.
-- Use the built-in JSON export to keep a backup. Store exported files somewhere private because they may contain personal reflections.
-- If you host the page on a website, browser storage is associated with that site's origin. A local file and a hosted website may not share the same saved data.
+## Daily habits tracked
 
-## Technical details
+1.  Gentle massage around the orbital bone (never press on the eyeball).
+2.  Comfortable eye movements and natural blinking.
+3.  Outdoor daylight time.
+4.  Screen breaks and evening comfort.
+5.  Relaxation or rest.
 
-- **Format:** Single-page HTML application.
-- **Frontend:** HTML, CSS, and vanilla JavaScript.
-- **Persistence:** Browser `localStorage`.
-- **Backup format:** JSON.
-- **External runtime dependencies:** None required to run the tracker itself.
-- **Hosting:** Any static hosting provider that can serve HTML files.
+The app also includes expandable instructions, a 21-day calendar, an
+optional starting and Day 21 observation log, and fields for outdoor
+minutes and daily comfort notes.
 
-## Troubleshooting
+## Saving and backing up progress
 
-### My progress disappeared
+-   Entries are saved in browser local storage on the device and browser
+    where you use the app.
+-   Clearing browser data, using another browser/device, or using a
+    different browser profile may make saved progress unavailable.
+-   Click **Export backup (JSON)** to download a backup.
+-   Click **Import backup** to restore a previously exported JSON file.
+-   **Reset all progress** clears the app's saved tracking data after
+    confirmation.
 
-Check that you are using the same browser and profile, and that browser/site data was not cleared. If you previously exported a backup, use the import feature to restore it.
+Export a backup periodically if you want to preserve your entries.
 
-### I want to move progress to another device
+## YouTube video troubleshooting
 
-Export a JSON backup from the original browser, transfer the file securely, open the tracker on the other device, and import the backup.
+The embedded player may not work if the video owner has disabled
+embedding, YouTube requires a browser session, or browser privacy
+settings block the player.
 
-### I changed the journey start date
+-   Use **Open video on YouTube** if the embedded player does not load.
+-   If opening the HTML file directly causes an embed error, try the
+    local web server steps above.
+-   Video URL: https://youtu.be/2VmjCxXBW-c
 
-Changing the start date can affect how dates map to the journey. Export a backup before making substantial changes if you want to preserve a restore point.
+The app cannot override restrictions set by YouTube or the video owner.
 
-### The page does not save progress
+## Safety notes
 
-Ensure browser storage is enabled and that the browser is not running in a restrictive private session. Try a current version of Chrome, Firefox, Edge, or Safari.
+-   **Never look directly at the sun**, including at sunrise or sunset.
+-   Never press on your eyeballs or massage a painful or injured eye.
+-   Stop an activity if it causes pain, dizziness, headache, double
+    vision, or worsening symptoms.
+-   Continue wearing prescribed glasses or contact lenses as directed;
+    do not change a prescription based on this routine.
+-   Seek urgent medical care for sudden vision loss, severe eye pain,
+    new flashes or many new floaters, or a curtain/shadow over your
+    vision.
+-   Arrange an eye examination for persistent blur, eye strain, or
+    changing vision.
 
-## Health and safety note
+## Technology
 
-This tracker is for general habit-building and is not a personalized exercise prescription or medical advice. Adjust activity to your current fitness, take recovery days, and seek qualified medical guidance if you have health concerns or are unsure which activities are appropriate for you.
+-   HTML
+-   CSS
+-   Vanilla JavaScript
+-   Browser `localStorage`
+-   YouTube embedded player
 
-## Project structure
+## Project files
 
-```text
-.
-├── 30-day-exercise-diet-journey.html
+``` text
+eye-reset/
+├── eye-reset-detailed-21-day-guide.html
 └── README.md
 ```
 
+Place `README.md` in the same folder as the HTML app.
+
 ## License
 
-No license is specified by this README. Add a `LICENSE` file before distributing the project if you want to grant others explicit reuse rights.
+No license is specified by this project. Add a license file if you
+intend to distribute or reuse the app publicly.
